@@ -6,4 +6,4 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Initial module scaffolding
+- Horizontal scene navigation option that displays scenes as pills across the top of the screen instead of the v13 vertical dropdown

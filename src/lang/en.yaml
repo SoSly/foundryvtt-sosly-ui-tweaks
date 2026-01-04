@@ -1,2 +1,6 @@
 sosly-ui-tweaks:
   name: "SoSly UI Tweaks"
+  settings:
+    horizontalNavigation:
+      label: "Horizontal Scene Navigation"
+      hint: "Display scene navigation as horizontal pills across the top of the screen instead of the vertical dropdown."

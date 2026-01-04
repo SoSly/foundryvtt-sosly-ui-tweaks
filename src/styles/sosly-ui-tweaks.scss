@@ -1,2 +1,73 @@
 // SoSly UI Tweaks styles
-// Add module-specific styles here
+
+// Horizontal Scene Navigation
+.horizontal-navigation {
+    #scene-navigation {
+        position: fixed;
+        top: 0;
+        left: calc((var(--control-columns) * var(--control-size)) + ((var(--control-columns) - 1) * 8px) + 1rem);
+        z-index: var(--z-index-app);
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        max-height: none;
+        max-width: calc(100vw - 350px); // Leave room for sidebar
+        overflow-x: auto;
+
+        // Hide the expand/collapse button
+        #scene-navigation-expand {
+            display: none;
+        }
+
+        // Make both menus horizontal and visible
+        .scene-navigation-menu {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        #scene-navigation-active,
+        #scene-navigation-inactive {
+            flex: none;
+            height: auto;
+            visibility: visible;
+            padding-bottom: 0;
+        }
+
+        // Scene pills as inline items
+        .scene {
+            width: auto;
+            max-width: none;
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        // Adjust player pips for horizontal layout
+        .scene-players {
+            position: static;
+            margin-left: 0.25rem;
+        }
+
+        // Adjust drop targets for horizontal drag-drop
+        .scene.drop-target-before,
+        .scene.drop-target-after {
+            &::before {
+                border-top: none;
+                border-left: 2px solid var(--color-border-highlight);
+                width: auto;
+                height: 100%;
+                top: 0;
+                left: -4px;
+            }
+        }
+
+        .scene.drop-target-after::before {
+            left: unset;
+            right: -4px;
+        }
+    }
+}
