@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [13.0.0](https://github.com/SoSly/foundryvtt-sosly-ui-tweaks/releases/tag/v13.0.0) - 2026-01-04
 
 ### Added
 
