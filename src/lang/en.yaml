@@ -1,6 +1,9 @@
 sosly-ui-tweaks:
   name: "SoSly UI Tweaks"
   settings:
+    chatCollapsed:
+      label: "Chat Collapsed"
+      hint: "Whether the chat notifications area is currently collapsed."
     horizontalNavigation:
       label: "Horizontal Scene Navigation"
       hint: "Display scene navigation as horizontal pills across the top of the screen instead of the vertical dropdown."

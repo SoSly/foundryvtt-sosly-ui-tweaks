@@ -1,0 +1,38 @@
+.sosly-collapsible-chat {
+    #ui-right-column-1 {
+        flex-direction: row;
+        align-items: flex-end;
+
+        > .sosly-tray-toggle {
+            order: -1;
+            margin-bottom: 3px;
+            transition: transform 250ms ease;
+        }
+    }
+
+    #chat-notifications {
+        height: 100%;
+        transition: transform 250ms ease;
+
+        .overflow,
+        .chat-input,
+        #chat-controls {
+            transition: opacity 200ms ease;
+        }
+
+        &.collapsed {
+            transform: translateX(calc(100% + 16px));
+
+            .overflow,
+            .chat-input,
+            #chat-controls {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            ~ .sosly-tray-toggle {
+                transform: translateX(calc(var(--sidebar-width) + 16px));
+            }
+        }
+    }
+}
