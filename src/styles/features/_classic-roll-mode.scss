@@ -1,0 +1,30 @@
+.sosly-classic-roll-mode {
+    .roll-type-select {
+        height: 32px;
+        border: 1px solid var(--control-border-color);
+        border-radius: 4px;
+        background: var(--color-cool-5);
+        color: var(--color-text-primary);
+        padding: 0 8px;
+        font-size: var(--font-size-12);
+
+        &:focus {
+            outline: none;
+            border-color: var(--color-border-highlight);
+        }
+    }
+
+    #chat-controls .roll-type-select {
+        flex: 1;
+    }
+
+    #chat-notifications > .roll-type-select {
+        width: 100%;
+        margin-bottom: 4px;
+        pointer-events: all;
+    }
+
+    #chat-notifications.collapsed > .roll-type-select {
+        display: none;
+    }
+}
