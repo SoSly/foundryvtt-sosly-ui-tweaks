@@ -1,0 +1,77 @@
+.horizontal-navigation {
+    #scene-navigation {
+        position: fixed;
+        top: 0;
+        left: calc((var(--control-columns) * var(--control-size)) + ((var(--control-columns) - 1) * 8px) + 1rem);
+        z-index: var(--z-index-app);
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        max-height: none;
+        max-width: calc(100vw - 350px);
+        overflow-x: auto;
+
+        #scene-navigation-expand {
+            display: none;
+        }
+
+        .scene-navigation-menu {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        #scene-navigation-active,
+        #scene-navigation-inactive {
+            flex: none;
+            height: auto;
+            visibility: visible;
+            padding-bottom: 0;
+        }
+
+        .scene {
+            width: 140px;
+            display: inline-flex;
+            align-items: center;
+            cursor: grab;
+            position: relative;
+
+            &:active {
+                cursor: grabbing;
+            }
+
+            .scene-name {
+                flex: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        .scene-players {
+            flex-shrink: 0;
+            position: static;
+            margin-left: 0.25rem;
+        }
+
+        .scene.drop-target-before,
+        .scene.drop-target-after {
+            &::before {
+                content: '';
+                position: absolute;
+                border-left: 2px solid var(--color-border-highlight);
+                height: 100%;
+                top: 0;
+                left: -4px;
+            }
+        }
+
+        .scene.drop-target-after::before {
+            left: unset;
+            right: -4px;
+        }
+    }
+}

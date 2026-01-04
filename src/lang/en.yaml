@@ -4,3 +4,9 @@ sosly-ui-tweaks:
     horizontalNavigation:
       label: "Horizontal Scene Navigation"
       hint: "Display scene navigation as horizontal pills across the top of the screen instead of the vertical dropdown."
+    hotbarCollapsed:
+      label: "Hotbar Collapsed"
+      hint: "Whether the hotbar is currently collapsed."
+  tray:
+    collapse: "Collapse"
+    expand: "Expand"
