@@ -37,28 +37,40 @@
             padding-bottom: 0;
         }
 
-        // Scene pills as inline items
+        // Scene pills as fixed-width items
         .scene {
-            width: auto;
-            max-width: none;
+            width: 140px;
             display: inline-flex;
             align-items: center;
-            white-space: nowrap;
+            cursor: grab;
+            position: relative;
+
+            &:active {
+                cursor: grabbing;
+            }
+
+            .scene-name {
+                flex: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
         }
 
-        // Adjust player pips for horizontal layout
+        // Player pips inline after scene name
         .scene-players {
+            flex-shrink: 0;
             position: static;
             margin-left: 0.25rem;
         }
 
-        // Adjust drop targets for horizontal drag-drop
+        // Drop target indicators for horizontal drag-drop
         .scene.drop-target-before,
         .scene.drop-target-after {
             &::before {
-                border-top: none;
+                content: '';
+                position: absolute;
                 border-left: 2px solid var(--color-border-highlight);
-                width: auto;
                 height: 100%;
                 top: 0;
                 left: -4px;
