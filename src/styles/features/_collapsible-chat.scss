@@ -16,7 +16,7 @@
 
     #chat-notifications {
         height: 100%;
-        transition: transform 250ms ease;
+        transition: transform 250ms ease, visibility 0ms;
 
         .overflow,
         .chat-input,
@@ -26,6 +26,8 @@
 
         &.collapsed {
             transform: translateX(calc(100% + 16px));
+            visibility: hidden;
+            transition: transform 250ms ease, visibility 0ms 250ms;
 
             .overflow,
             .chat-input,
