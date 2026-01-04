@@ -10,6 +10,10 @@
         }
     }
 
+    &:has(#sidebar-content.expanded.active-chat) #ui-right-column-1 > .sosly-tray-toggle {
+        display: none;
+    }
+
     #chat-notifications {
         height: 100%;
         transition: transform 250ms ease;
